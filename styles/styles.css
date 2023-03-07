@@ -1,8 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'spartan', sans-serif;
 }
-h1{
-    color: blue;
+body {
+   width: 100%;
+
 }
+
+/*header starts*/
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #c1adbd;
+    box-shadow: 3px 3px 2px rgba(94, 13, 13, 0.5);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(20, 17, 17);
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+/*navrbar ends*/
+
+
+
+
+/*hero starts*/
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.slides{
+width: 100%;
+height: 100%;
+}
+.slides::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  background: rgba(0,0,0,0.6);
+    z-index: 0;
+}
+.slides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.img-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+   
+}
+.img-overlay p{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.img-overlay h1{
+    font-size: 3.2rem;
+    color: #e31111;
+    letter-spacing: 5px;
+ 
+}
+.img-overlay h3{
+    font-size: 2.2rem;
+    color: rgb(31, 74, 114);
+    letter-spacing: 5px;
+}
+.img-overlay a{
+    background: #088178;
+    text-decoration: none;
+    color: #f7f3f3;
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;;
+}
+.img-overlay a:hover{
+    background: #1c5955;
+}
+.btn{
+    background:rgb(23, 18, 18);
+    padding: 2rem;
+    color: rgb(242, 243, 245);
+    border-radius:100%;
+}
+.btn::after{
+    color: rgb(241, 243, 244);
+    
+}
+.swiper-button-next btn
